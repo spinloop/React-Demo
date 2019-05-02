@@ -11,4 +11,4 @@ class ClickCounter extends React.Component {
   }
 }
 
-export default withCounter(ClickCounter)
+export default withCounter(ClickCounter, 1)
