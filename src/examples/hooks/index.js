@@ -7,6 +7,7 @@ export default () => {
   return (
     <div className="Example">
       <header className="Example-header">Hook Demo</header>
+      <button>clicked {count} times</button>
     </div>
   )
 }
