@@ -1,5 +1,6 @@
 import React from 'react';
 import HOC from './examples/hoc'
+import Hooks from './examples/hooks'
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         React Demo
       </header>
       <HOC />
+      <Hooks />
     </div>
   );
 }
