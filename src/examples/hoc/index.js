@@ -6,7 +6,7 @@ import '../../App.css';
 export default () => (
   <div className="Example">
     <header className="Example-header">HOC Demo</header>
-    <ClickCounter />
-    <HoverCounter />
+    <ClickCounter type="click" />
+    <HoverCounter type="hover" />
   </div>
 )

@@ -3,10 +3,10 @@ import withCounter from './withCounter'
 
 class ClickCounter extends React.Component {
   render() {
-    const { count, increment } = this.props
+    const { count, increment, type } = this.props
 
     return (
-      <button onClick={increment}>{`${count} button clicks`}</button>
+      <button onClick={increment}>{`${count} button ${type}s`}</button>
     )
   }
 }

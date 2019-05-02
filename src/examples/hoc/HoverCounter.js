@@ -3,10 +3,10 @@ import withCounter from './withCounter'
 
 class HoverCounter extends React.Component {
   render() {
-    const { count, increment } = this.props
+    const { count, increment, type } = this.props
 
     return (
-      <button onMouseOver={increment}>{`${count} button hovers`}</button>
+      <button onMouseOver={increment}>{`${count} button ${type}s`}</button>
     )
   }
 }
