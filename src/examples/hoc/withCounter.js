@@ -4,7 +4,7 @@ const withCounter = (WrappedComponent) => {
   class WithCounter extends React.Component {
     render() {
       return (
-        <WrappedComponent />
+        <WrappedComponent {...this.props} />
       )
     }
   }
