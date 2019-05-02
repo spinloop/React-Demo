@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
+import StateHook from './StateHook'
 import '../../App.css';
 
 export default () => {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="Example">
       <header className="Example-header">Hook Demo</header>
-      <button onClick={() => setCount(count + 1)}>clicked {count} times</button>
+      <StateHook />
     </div>
   )
 }
