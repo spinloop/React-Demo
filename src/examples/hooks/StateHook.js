@@ -6,6 +6,10 @@ export default () => {
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `You clicked ${count} times`;
+
+    return () => {
+      console.log('clean up')
+    }
   })
 
   return (
