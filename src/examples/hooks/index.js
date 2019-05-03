@@ -1,6 +1,5 @@
 import React from 'react'
 import StateHook from './StateHook'
-import '../../App.css';
 
 export default () => {
   return (
