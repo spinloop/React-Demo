@@ -2,6 +2,8 @@ import React from 'react'
 import '../../App.css';
 import map from 'lodash/map'
 
+import ThemedComponent from './ThemedComponent'
+
 export default () => {
   // mock api response
   const data = [
@@ -10,7 +12,8 @@ export default () => {
       text: 'goat',
       style: {
         color: '#DCDCDC'
-      }
+      },
+      theme: 'default'
     },
     {
       __typename: 'b',
@@ -27,17 +30,24 @@ export default () => {
         display: 'block'
       },
       href: 'http://localhost:3001/'
-    }
+    },
+    {
+      __typename: 'a',
+      text: 'goat',
+      style: {
+        color: '#DCDCDC'
+      },
+      theme: 'other'
+    },
   ]
 
   // components
-  const A = (props) => <div {...props}>{props.text}</div>
   const B = (props) => <button {...props}>{props.text}</button>
   const C = (props) => <a {...props}>{props.text}</a>
 
   // componentMap
   const componentMap = {
-    'a': A,
+    'a': ThemedComponent,
     'b': B,
     'c': C
   }
