@@ -1,4 +1,5 @@
 import React from 'react'
+import { componentForKey } from './componentMap'
 
 const DefaultComponent = props => (
   <div {...props}>{props.text}</div>
@@ -14,7 +15,7 @@ const themeMap = {
 }
 
 const componentForTheme = themeMap => props => {
-  const Component = themeMap[props.theme]
+  const Component = componentForKey(themeMap, "theme")(props)
 
   return <Component {...props} />
 }

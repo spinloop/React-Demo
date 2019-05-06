@@ -3,6 +3,7 @@ import '../../App.css';
 import map from 'lodash/map'
 
 import ThemedComponent from './ThemedComponent'
+import { componentForKey } from './componentMap'
 
 export default () => {
   // mock api response
@@ -53,9 +54,9 @@ export default () => {
   }
 
   const elements = map(data, (item, index) => {
-    const component = componentMap[item.__typename]
-    const props = { ...item, ...{ key: index }}
+    const props = { ...item, ...{ key: index } }
     console.log(props)
+    const component = componentForKey(componentMap, "__typename")(props)
 
     return React.createElement(component, props)
   })
