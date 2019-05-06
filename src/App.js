@@ -1,6 +1,8 @@
 import React from 'react';
 import HOC from './examples/hoc'
 import Hooks from './examples/hooks'
+import ComponentMapping from './examples/component_mapping'
+
 import './App.css';
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
       </header>
       <HOC />
       <Hooks />
+      <ComponentMapping />
     </div>
   );
 }
