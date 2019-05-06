@@ -2,6 +2,10 @@
   text-align: left;
 }
 
+.Example {
+  padding-bottom: 20px;
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
@@ -13,6 +17,7 @@
 .Example-header {
   font-size: calc(10px + 1vmin);
   color: white;
+  padding-bottom: 5px;
 }
 
 .App-link {

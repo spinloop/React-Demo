@@ -1,29 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const withCounter = (WrappedComponent, multiplier) => {
-  class WithCounter extends React.Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        count: 0
-      }
-    }
+  const WithCounter = props => {
+    const [count, setCount] = useState(0)
 
-    increment = () => {
-      this.setState(prevState => {
-        return { count: prevState.count + (1 * multiplier) }
-      })
-    }
-
-    render() {
-      return (
-        <WrappedComponent
-          count={this.state.count}
-          increment={this.increment}
-          {...this.props}
-        />
-      )
-    }
+    return (
+      <WrappedComponent
+        count={count}
+        increment={() => setCount(count + (1 * multiplier))}
+        {...props}
+      />
+    )
   }
 
   return WithCounter
