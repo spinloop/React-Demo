@@ -10,7 +10,7 @@ export default () => {
     return () => {
       console.log('clean up')
     }
-  })
+  }, [count])
 
   return (
     <button onClick={() => setCount(count + 1)}>clicked {count} times</button>
