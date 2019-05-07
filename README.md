@@ -2,7 +2,7 @@
 
 * Higher-Order Component (HOC)
 * State Hooks
-+ Custom Hooks
+* Custom Hooks
 * Component Mapping
 
 ## Available Scripts
