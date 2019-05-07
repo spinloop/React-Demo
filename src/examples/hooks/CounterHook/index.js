@@ -1,7 +1,37 @@
 import React, { useState, useEffect } from 'react'
 
-const CounterHookExample = () => {
+const CounterHookExample = () => ([
+  <header className="Example-header">Counter Hook Example (custom hook)</header>,
+  <div>
+    <Clicking />
+    <Hovering />
+  </div>
+])
+
+const Clicking = () => {
+  // objecty destructuring
+  const { count, increment } = useCounter()
+
+  return (
+    <button onClick={increment}>the count is {count}</button>
+  )
+}
+
+const Hovering = () => {
+  const { count, increment } = useCounter()
+
+  return (
+    <div onMouseOver={increment}>the hover count is {count}</div>
+  )
+}
+
+function useCounter() {
+  // array destructuring
   const [count, setCount] = useState(0)
+
+  function handleIncrement(e) {
+    setCount(count + 1)
+  }
 
   useEffect(() => {
     console.log('count: ' + count)
@@ -12,12 +42,8 @@ const CounterHookExample = () => {
     }
   }, [count])
 
-  return ([
-    <header className="Example-header">Counter Hook Example</header>,
-    <div>
-      <button onClick={() => setCount(count + 1)}>the count is {count}</button>
-    </div>
-  ])
+  // note the custom hook can return an object that can be destructed when its consumed
+  return { count, increment: handleIncrement }
 }
 
 export default CounterHookExample
