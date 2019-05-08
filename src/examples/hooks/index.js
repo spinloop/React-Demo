@@ -1,6 +1,7 @@
 import React from 'react'
 import StateHook from './StateHook'
 import CounterHook from './CounterHook'
+import ReducerHook from './ReducerHook'
 
 export default () => {
   return (
@@ -8,6 +9,7 @@ export default () => {
       <header className="Example-header">Hook Demo</header>
       <StateHook />
       <CounterHook />
+      <ReducerHook initialState={{ count: 0 }}/>
     </div>
   )
 }

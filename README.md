@@ -1,8 +1,10 @@
 ## Available Demos
 
 * Higher-Order Component (HOC)
-* State Hooks
-* Custom Hooks
+* Hooks:
+  * State Hooks
+  * Custom Hooks
+  * Reducer Hooks
 * Component Mapping
 
 ## Available Scripts
