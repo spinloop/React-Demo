@@ -5,6 +5,7 @@
   * State Hooks
   * Custom Hooks
   * Reducer Hooks
+  * Context Hooks (theme)
 * Component Mapping
 
 ## Available Scripts
