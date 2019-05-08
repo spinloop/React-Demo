@@ -9,7 +9,7 @@ export default () => {
       <header className="Example-header">Hook Demo</header>
       <StateHook />
       <CounterHook />
-      <ReducerHook />
+      <ReducerHook initialState={{ count: 0 }}/>
     </div>
   )
 }
