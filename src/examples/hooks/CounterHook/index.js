@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
 const CounterHookExample = () => ([
-  <header className="Example-header">Counter Hook Example (custom hook)</header>,
-  <div>
+  <header key={0} className="Example-header">Counter Hook Example (custom hook)</header>,
+  <div key={1}>
     <Clicking />
     <Hovering />
   </div>
