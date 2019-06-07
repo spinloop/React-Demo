@@ -7,6 +7,7 @@
   * Reducer Hooks
   * Context Hooks (theme)
 * Component Mapping
+* Mock server-side rendering
 
 ## Available Scripts
 
