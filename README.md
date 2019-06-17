@@ -8,6 +8,7 @@
   * Context Hooks (theme)
 * Component Mapping
 * Mock server-side rendering
+* Vanilla script
 
 ## Available Scripts
 
